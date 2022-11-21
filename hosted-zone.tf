@@ -12,7 +12,7 @@ resource "aws_route53_record" "main-a-record" {
    name = "${var.domain_name}"
    type = "A"
    alias {
-    name = "${aws_s3_bucket.website.website_domain}"
+    name = "aws_s3_bucket.website.website_domain"
     zone_id = "${aws_s3_bucket.website.hosted_zone_id}"
     evaluate_target_health = false
   }
